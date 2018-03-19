@@ -1,0 +1,83 @@
+/*@font-face {*/
+    /*font-family: Roboto; !* Гарнитура шрифта *!*/
+    /*src: url(fonts/Roboto-Thin.ttf); !* Путь к файлу со шрифтом *!*/
+   /*}*/
+
+
+html, body{
+    height: 100%;
+    max-height: 100%;
+    background-color: #edeef0;
+
+
+    /*#edeef0*/
+}
+
+.wrapper{
+
+    max-height: 100%;
+    background-color: #edeef0;
+}
+
+
+.section-top{
+    margin-bottom: 30px;
+}
+.emergency-item{
+    height: 425px;
+    background-color: white;
+    border: 1px solid lightgray;
+    position: relative;
+    padding: 5px;
+    text-align: center;
+    margin-bottom: 10px;
+    overflow:hidden;
+}
+
+/*.more-info{*/
+    /*position: absolute;*/
+    /*bottom: 10px;*/
+    /*left: 42px;*/
+/*}*/
+
+.status{
+    font-style: italic;
+    position: absolute;
+    bottom: 45px;
+    left: 86px;
+}
+
+.date-em{
+    font-style: italic;
+    position: absolute;
+    bottom: 14px;
+    left: 50px;
+}
+
+.img-item {
+    max-width: 200px;
+    max-height: 200px;
+    position: relative;
+}
+
+.section1{
+    margin: 60px;
+}
+
+.section3{
+    margin: 60px;
+}
+
+.title1{
+    text-align: center;
+    color: #2da3ff;
+    font-weight: 100;
+    line-height: 1.2;
+}
+
+.recent{
+    margin-bottom: 20px;
+    color: #2da3ff;
+}
+
+

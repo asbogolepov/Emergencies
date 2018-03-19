@@ -1,0 +1,186 @@
+{% extends 'base.html' %}
+{% load static %}
+
+<script src="{% static 'js/bootstrap.js' %}"></script>
+
+
+{% block content %}
+{#    <div class="section-top">#}
+{#        <img src="{% static 'img/rescuers.JPG' %}" class="img-responsive center-block">#}
+{#    </div>#}
+{##}
+{##}
+{#    <div id="carousel" class="carousel slide">#}
+{#        <!--Индикаторы слайдов -->#}
+{#        <ol class="carousel-indicators">#}
+{#            <li class="active" data-target="#carousel" data-slide-to="0"></li>#}
+{#            <li data-target="#carousel" data-slide-to="1"></li>#}
+{#            <li data-target="#carousel" data-slide-to="2"></li>#}
+{#        </ol>#}
+{##}
+{#        <!--Слайды -->#}
+{#        <div class="carousel-inner">#}
+{#            <div class="item active">#}
+{#                <img src="{% static 'img/rescuers.JPG' %}" alt="" class="img-responsive center-block">#}
+{#                <div class="carousel-caption">#}
+{#                    <h3>Первый слайд</h3>#}
+{#                    <p>Описание первого слайда</p>#}
+{#                </div>#}
+{##}
+{#            </div>#}
+{#            <div class="item">#}
+{#                <img src="{% static 'img/rescuers.JPG' %}" alt="" class="img-responsive center-block">#}
+{#                <div class="carousel-caption">#}
+{#                    <h3>Второй слайд</h3>#}
+{#                    <p>Описание второго слайда</p>#}
+{#                </div>#}
+{#            </div>#}
+{#            <div class="item">#}
+{#                <img src="{% static 'img/rescuers.JPG' %}" alt="" class="img-responsive center-block">#}
+{#                <div class="carousel-caption">#}
+{#                    <h3>Третий слайд</h3>#}
+{#                    <p>Описание третьего слайда</p>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{##}
+{#        <!--Стрелки переключения слайдов -->#}
+{#        <a href="#carousel" class="left carousel-control" data-slide="prev">#}
+{#            <span class="glyphicon glyphicon-chevron-left"></span>#}
+{#        </a>#}
+{#        <a href="#carousel" class="right carousel-control" data-slide="next">#}
+{#            <span class="glyphicon glyphicon-chevron-right"></span>#}
+{#        </a>#}
+{#    </div>#}
+
+
+
+    <div class="section section1">
+        <div class="container">
+            <div class="row">
+
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <h1 class = "title1">Сообщить о Чрезвычайной Ситуации</h1>
+                            <div>
+
+
+                                <form action="" method="post" enctype="multipart/form-data" class="form-inline text-center">{% csrf_token %}
+                                    <div class="form-group">
+                                        <label>Ваше имя: </label>
+                                        <input type="text" placeholder="Введите имя..." name="{{ form.person_name.name }}" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Телефон: </label>
+                                        <input type="text" placeholder="Введите телефон..." name="{{ form.phone.name }}" class="form-control">
+                                    </div>
+                                    <div class="form-group" style="padding-top: 30px; padding-left: 5px">
+                                        <label>Адрес: </label>
+                                        <input type="text" placeholder="Введите адрес..." name="{{ form.name.name }}" class="form-control">
+                                    </div>
+                                    <div class="form-group" style="padding-top: 30px">
+                                        <label>Опишите ЧС: </label>
+                                        <input type="text" maxlength="150" placeholder="Описание..." name="{{ form.description.name }}" class="form-control">
+                                    </div>
+{#                                    <div class="form-group">#}
+{#                                        <label>Статус ЧС: </label>#}
+{#                                        <input type="text" placeholder="Описание..." name="{{ form.status.name }}" class="form-control">#}
+{#                                    </div>#}
+{#                                    <div class="form-group">#}
+{#                                        <label>Фото ЧС:</label>#}
+{#                                        <input type="file" name="{{ form1.image.name }}" class="form-control">#}
+{#                                    </div>#}
+                                    <p class="form-group" style="padding: 20px;">
+                                        <label>Добавьте фото:</label>
+                                        {{ form1.image }}
+                                    </p>
+
+
+                                    <div class="form-group">
+                                        <button type="submit" class="btn btn-primary" style="background: #2da3ff; margin-top: 15px">Отправить</button>
+                                    </div>
+                                </form>
+
+{#                                <form method="post" enctype="multipart/form-data">#}
+{#                                     {% csrf_token %}#}
+{#                                    <input type="file" name="myfile">#}
+{#                                    <button type="submit">Upload</button>#}
+{#                                </form>#}
+{##}
+{#                                     {% if uploaded_file_url %}#}
+{#                                         <p>File uploaded at: <a href="{{ uploaded_file_url }}">{{ uploaded_file_url }}</a></p>#}
+{#                                     {% endif %}#}
+{##}
+{#                                  <p><a href="{% url 'emergencies' %}">Return to home</a></p>#}
+
+{#                                <form method="post" enctype="multipart/form-data">#}
+{#                                    {% csrf_token %}#}
+{#                                    {{ form1 }}#}
+{#                                    <button type="submit">Upload</button>#}
+{#                                </form>#}
+{##}
+{#                                <p><a href="{% url 'emergencies' %}">Return to home</a></p>#}
+
+                            </div>
+                    </div>
+
+            </div>
+        </div>
+    </div>
+
+     <div class="section section2">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="title1 recent">
+                        Недавние заявки
+                    </h1>
+                </div>
+                {% for emergency_image in emergency_images %}
+                    <div class="col-lg-3">
+                            <div class="emergency-item" style="height: 425px;">
+                                <div>
+                                    <img src="{{ emergency_image.image.url }}" class="img-responsive img-item">
+                                </div>
+                                <h4>{{ emergency_image.emergency.name }}</h4>
+                                <p>
+                                    {{ emergency_image.emergency.description|truncatechars_html:150 }}
+                                </p>
+                                <div class="status">
+                                    {{ emergency_image.emergency.status }}
+                                </div>
+                                <div class="date-em">
+                                    {{ emergency_image.emergency.created }}
+                                </div>
+{#                                <div class="more-info">#}
+{#                                    <button class="btn btn-link">#}
+{#                                        Больше информации...#}
+{#                                    </button>#}
+{#                                </div>#}
+                            </div>
+                    </div>
+
+                {% endfor %}
+            </div>
+        </div>
+     </div>
+
+    <div id="footer" class="section section3">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="col-lg-8">
+                        <p>Данный проект создан для оптимизации работы служб МЧС города.</p>
+                        <p>Этот ресурс позволяет внести свой
+                            вклад в ликвиlацию последствий ЧС каждому гражданину России.</p>
+
+                    </div>
+                    <div class="col-lg-4">
+                        <p>+7 (495) 574-55-20</p>
+                        <p>messageMCHS@mchs.com</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

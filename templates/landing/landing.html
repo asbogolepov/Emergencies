@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Landing page</title>
+
+
+
+{#    <link href="https://fonts.googleapis.com/css?family=Roboto:100,400" rel="stylesheet">#}
+    <link rel = "stylesheet" href ="{% static 'css/landingstyle.css' %}">
+    <link rel = "stylesheet" href ="{% static 'css/bootstrap.css' %}">
+
+
+
+</head>
+<body>
+
+    <div class="general-container">
+        <div class="container top-container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                            <h1 class = "title">Наш сайт скоро откроется<br>
+                            Оставляйте ваш e-mail в форме ниже</h1>
+                            <div>
+                                <form action="" method="post" class="form-inline text-center">{% csrf_token %}
+                                    <div class="form-group">
+                                        <label>Ваш e-mail: </label>
+                                        <input type="email" placeholder="Введите e-mail..." name="{{ form.email.name }}" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Ваше имя: </label>
+                                        <input type="text" placeholder="Введите имя..." name="{{ form.name.name }}" class="form-control">
+                                    </div>
+
+                                    <button type="submit" class="btn btn-primary ">Отправить</button>
+                                </form>
+
+                            </div>
+                </div>
+            </div>
+        </div>
+    </div>>
+
+
+</body>
+</html>
